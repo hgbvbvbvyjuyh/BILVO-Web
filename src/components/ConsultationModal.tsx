@@ -200,7 +200,7 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
       }
 
       if (!submittedSuccessfully) {
-        throw new Error(result?.error || 'Unable to submit your request at this moment. Please check your internet connection or email us directly at contact@bilvo.ai.');
+        throw new Error(result?.error || 'Unable to submit your request at this moment. Please check your internet connection or email us directly at contact@bilvoai.online.');
       }
 
       // 3. Save local lead backup in browser storage
