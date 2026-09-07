@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bilvo.ai/sitemap.xml
+Sitemap: https://bilvoai.online/sitemap.xml
