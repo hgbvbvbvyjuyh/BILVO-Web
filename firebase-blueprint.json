@@ -1,0 +1,47 @@
+{
+  "entities": {
+    "strategy_session_requests": {
+      "title": "Strategy Session Request",
+      "description": "Bilvo Ai consultation and AI strategy session lead submissions",
+      "type": "object",
+      "properties": {
+        "firstName": { "type": "string" },
+        "lastName": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "companyName": { "type": "string" },
+        "companyWebsite": { "type": "string" },
+        "role": { "type": "string" },
+        "companySize": { "type": "string" },
+        "annualRevenue": { "type": "string" },
+        "projectBudget": { "type": "string" },
+        "howCanWeHelp": { "type": "string" },
+        "aiGoals": { "type": "array", "items": { "type": "string" } },
+        "additionalNotes": { "type": "string" },
+        "status": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "source": { "type": "string" }
+      },
+      "required": [
+        "firstName",
+        "lastName",
+        "email",
+        "companyName",
+        "role",
+        "companySize",
+        "annualRevenue",
+        "projectBudget",
+        "howCanWeHelp",
+        "status",
+        "createdAt"
+      ]
+    }
+  },
+  "firestore": {
+    "collections": {
+      "strategy_session_requests": {
+        "entity": "strategy_session_requests",
+        "description": "Form submissions from potential clients seeking an AI strategy session"
+      }
+    }
+  }
+}

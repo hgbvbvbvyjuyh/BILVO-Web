@@ -1,0 +1,982 @@
+@import "tailwindcss";
+
+:root {
+  /* ==========================================
+     THEME 1 (DEFAULT) → BILVO AI BRAND THEME (PREMIUM LIGHT THEME)
+     ========================================== */
+  --background: #FFFFFF;
+  --bg-alt: #FFFFFF; /* Pure White! NO off-white or gray-blue backgrounds as requested */
+  --card-bg: #FFFFFF;
+  --card-bg-gradient: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 100%);
+  --card-bg-gradient-hover: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 100%);
+  --card-border: #E2E8F0;
+  --card-border-hover: #CBD5E1;
+  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.01), 0 2px 8px rgba(15, 23, 42, 0.015), 0 12px 24px -4px rgba(15, 23, 42, 0.03);
+  --card-shadow-hover: 0 1px 3px rgba(0, 0, 0, 0.01), 0 4px 12px rgba(15, 23, 42, 0.025), 0 20px 36px -4px rgba(15, 23, 42, 0.05);
+  --navbar-bg: rgba(255, 255, 255, 0.95);
+  --navbar-border: #E2E8F0;
+  --navbar-shadow-opacity: 0.04;
+  --navbar-dropdown-bg: #FFFFFF;
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #64748B;
+  --border-color: #E2E8F0;
+  --button-primary: #2563EB;
+  --button-primary-hover: #1D4ED8;
+  --button-secondary-bg: #FFFFFF;
+  --button-secondary-border: #E2E8F0;
+  --button-secondary-text: #0F172A;
+  --button-secondary-bg-hover: #F8FAFC;
+  --button-secondary-border-hover: #CBD5E1;
+  --button-secondary-text-hover: #0F172A;
+  --icon-bg: #EFF6FF;
+  --icon-bg-hover: #DBEAFE;
+  --icon-border: #EFF6FF;
+  --icon-border-hover: #DBEAFE;
+  --icon-color: #2563EB;
+  --icon-color-hover: #1D4ED8;
+  --glow-opacity: 0.03;
+  --divider-opacity: 1;
+  --divider-color: #F1F5F9;
+  --divider-glow: none;
+  --noise-opacity: 0;
+  --hero-grid-opacity: 0.05;
+  --hero-mesh-1: radial-gradient(circle, rgba(37, 99, 235, 0.03) 0%, transparent 70%);
+  --hero-mesh-2: radial-gradient(circle, rgba(37, 99, 235, 0.02) 0%, transparent 70%);
+  --hero-mesh-3: radial-gradient(circle, rgba(96, 165, 250, 0.01) 0%, transparent 65%);
+  --headline-glow: radial-gradient(circle, rgba(37, 99, 235, 0.03) 0%, transparent 70%);
+  --orb-bg: radial-gradient(circle at 35% 35%, rgba(37, 99, 235, 0.02) 0%, transparent 80%);
+  --orb-border: rgba(37, 99, 235, 0.05);
+  --scrollbar-bg: #FFFFFF;
+  --scrollbar-thumb: #E2E8F0;
+  --scrollbar-thumb-hover: #CBD5E1;
+  --faq-card-bg: #FFFFFF;
+  --faq-card-hover: #F8FAFC;
+  --faq-card-active: #EFF6FF;
+  --faq-border: #E2E8F0;
+  --faq-border-active: #BFDBFE;
+  --nav-indicator-bg: rgba(37, 99, 235, 0.06);
+  --nav-indicator-border: rgba(37, 99, 235, 0.16);
+  --text-shadow: none;
+  --bg-gradient-even: none;
+  --bg-gradient-odd: none;
+}
+
+[data-theme="midnight"] {
+  /* Midnight theme mapped exactly to premium light theme to prevent inconsistency if toggled */
+  --background: #FFFFFF;
+  --bg-alt: #FFFFFF;
+  --card-bg: #FFFFFF;
+  --card-bg-gradient: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 100%);
+  --card-bg-gradient-hover: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 100%);
+  --card-border: #E2E8F0;
+  --card-border-hover: #CBD5E1;
+  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.01), 0 2px 8px rgba(15, 23, 42, 0.015), 0 12px 24px -4px rgba(15, 23, 42, 0.03);
+  --card-shadow-hover: 0 1px 3px rgba(0, 0, 0, 0.01), 0 4px 12px rgba(15, 23, 42, 0.025), 0 20px 36px -4px rgba(15, 23, 42, 0.05);
+  --navbar-bg: rgba(255, 255, 255, 0.95);
+  --navbar-border: #E2E8F0;
+  --navbar-shadow-opacity: 0.04;
+  --navbar-dropdown-bg: #FFFFFF;
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #64748B;
+  --border-color: #E2E8F0;
+  --button-primary: #2563EB;
+  --button-primary-hover: #1D4ED8;
+  --button-secondary-bg: #FFFFFF;
+  --button-secondary-border: #E2E8F0;
+  --button-secondary-text: #0F172A;
+  --button-secondary-bg-hover: #F8FAFC;
+  --button-secondary-border-hover: #CBD5E1;
+  --button-secondary-text-hover: #0F172A;
+  --icon-bg: #EFF6FF;
+  --icon-bg-hover: #DBEAFE;
+  --icon-border: #EFF6FF;
+  --icon-border-hover: #DBEAFE;
+  --icon-color: #2563EB;
+  --icon-color-hover: #1D4ED8;
+  --glow-opacity: 0.03;
+  --divider-opacity: 1;
+  --divider-color: #F1F5F9;
+  --divider-glow: none;
+  --noise-opacity: 0;
+  --hero-grid-opacity: 0.05;
+  --hero-mesh-1: radial-gradient(circle, rgba(37, 99, 235, 0.03) 0%, transparent 70%);
+  --hero-mesh-2: radial-gradient(circle, rgba(37, 99, 235, 0.02) 0%, transparent 70%);
+  --hero-mesh-3: radial-gradient(circle, rgba(96, 165, 250, 0.01) 0%, transparent 65%);
+  --headline-glow: radial-gradient(circle, rgba(37, 99, 235, 0.03) 0%, transparent 70%);
+  --orb-bg: radial-gradient(circle at 35% 35%, rgba(37, 99, 235, 0.02) 0%, transparent 80%);
+  --orb-border: rgba(37, 99, 235, 0.05);
+  --scrollbar-bg: #FFFFFF;
+  --scrollbar-thumb: #E2E8F0;
+  --scrollbar-thumb-hover: #CBD5E1;
+  --faq-card-bg: #FFFFFF;
+  --faq-card-hover: #F8FAFC;
+  --faq-card-active: #EFF6FF;
+  --faq-border: #E2E8F0;
+  --faq-border-active: #BFDBFE;
+  --nav-indicator-bg: rgba(37, 99, 235, 0.06);
+  --nav-indicator-border: rgba(37, 99, 235, 0.16);
+  --text-shadow: none;
+  --bg-gradient-even: none;
+  --bg-gradient-odd: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem; /* Prevents sticky header from overlapping scrolled elements */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-brand-blue: #2563EB;
+  --color-brand-cyan: #60a5fa;
+  --color-brand-purple: #60a5fa;
+  --color-navy-dark: var(--background);
+  --color-navy-card: var(--card-bg);
+  --color-navy-light: var(--bg-alt);
+  --color-navy-purple: var(--bg-alt);
+  --color-navy-blue: var(--card-bg);
+}
+
+/* Base style resets and customizations with premium background depth */
+body {
+  background-color: var(--background);
+  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Premium ambient radial gradients on main layout */
+#applet-main-layout {
+  background-color: var(--background) !important;
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(37, 99, 235, var(--glow-opacity)) 0%, transparent 55%),
+    radial-gradient(circle at 10% 30%, rgba(37, 99, 235, calc(var(--glow-opacity) * 0.5)) 0%, transparent 45%),
+    radial-gradient(circle at 90% 70%, rgba(37, 99, 235, calc(var(--glow-opacity) * 0.5)) 0%, transparent 45%),
+    radial-gradient(circle at 50% 100%, rgba(37, 99, 235, calc(var(--glow-opacity) * 0.6)) 0%, transparent 50%) !important;
+  color: var(--text-secondary) !important;
+}
+
+/* Premium Fine Noise Overlay - 2% opacity as requested */
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: var(--noise-opacity); /* 2% opacity */
+  pointer-events: none;
+  z-index: 9999;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+}
+
+/* Premium Card Depth & Shadow system - Unified Obsidian Card Component System */
+.bg-navy-card, .bg-\[\#111322\], [id^="system-core-block-"], #phase-viewer-display, #about-founder-spotlight, .glass-card, .static-card-container, .phase-teaser-card, .value-card, .founder-card, .phase-nav-card, .demo-card {
+  background-color: var(--card-bg) !important;
+  /* Soft, elegant vertical gradient */
+  background-image: var(--card-bg-gradient) !important;
+  /* Thin premium border */
+  border: 1px solid var(--card-border) !important;
+  /* Border Radius increased to 24px */
+  border-radius: 24px !important;
+  /* Soft layered shadow & Ambient shadow + Subtle top highlight */
+  box-shadow: var(--card-shadow) !important;
+  /* Animate smoothly with a premium transition curve */
+  transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 200ms cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 200ms cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* Premium established agency trust cards - compact, architectural, balanced */
+.trust-card {
+  background-color: #FFFFFF !important;
+  background-image: linear-gradient(180deg, #FFFFFF 0%, #FAFCFF 100%) !important;
+  border: 1px solid #E2E8F0 !important;
+  border-radius: 14px !important;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04), 0 4px 12px -2px rgba(15, 23, 42, 0.03) !important;
+  transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 180ms cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 180ms cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.trust-card:hover {
+  transform: translateY(-2px) !important;
+  background-image: linear-gradient(180deg, #FFFFFF 0%, #F1F5F9 100%) !important;
+  border-color: #CBD5E1 !important;
+  box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.06), 0 1px 3px rgba(15, 23, 42, 0.04) !important;
+}
+
+#founder-trust-card {
+  border-color: rgba(37, 99, 235, 0.22) !important;
+  background-image: linear-gradient(180deg, #FFFFFF 0%, #F0F6FF 100%) !important;
+}
+
+#founder-trust-card:hover {
+  border-color: rgba(37, 99, 235, 0.42) !important;
+  background-image: linear-gradient(180deg, #FFFFFF 0%, #EBF4FF 100%) !important;
+}
+
+/* Better internal spacing/padding standardizer for major cards to enforce complete visual consistency */
+.bg-navy-card, .glass-card, .phase-teaser-card, .value-card, .founder-card, .static-card-container, .demo-card {
+  padding: 2rem !important;
+}
+@media (min-width: 768px) {
+  .bg-navy-card, .glass-card, .phase-teaser-card, .value-card, .founder-card, .static-card-container, .demo-card {
+    padding: 2.5rem !important; /* Premium 40px internal spacing */
+  }
+}
+
+/* Card Hover states with soft, luxurious lighting feedback (except static containers like display areas or modal cards) */
+.bg-navy-card:not(#modal-card):hover, .bg-\[\#111322\]:hover, [id^="system-core-block-"]:hover, .glass-card:hover, .trust-card:hover, .phase-teaser-card:hover, .value-card:hover, .founder-card:hover, .phase-nav-card:not(.active):hover, .demo-card:hover {
+  /* Very small premium lift (2px) */
+  transform: translateY(-2px) !important;
+  /* Increase background brightness slightly */
+  background-image: var(--card-bg-gradient-hover) !important;
+  /* Brighten border */
+  border-color: var(--card-border-hover) !important;
+  /* Increase shadow & Ambient shadow */
+  box-shadow: var(--card-shadow-hover) !important;
+}
+
+/* Specific Premium Phase Navigation Card customizations */
+.phase-nav-card:not(.active) {
+  opacity: 0.85;
+  border-color: var(--card-border) !important;
+}
+
+.phase-nav-card.active {
+  opacity: 1 !important;
+  background-image: var(--card-bg-gradient-hover) !important;
+  border-color: var(--card-border-hover) !important;
+  box-shadow: var(--card-shadow-hover) !important;
+}
+
+/* Premium Glassmorphism styling (Navbar remains distinct) */
+.glass-navbar {
+  background-color: var(--navbar-bg) !important;
+  backdrop-filter: blur(24px) saturate(140%) !important; /* Deep luxury background blur */
+  border-bottom: 1px solid var(--navbar-border) !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, var(--navbar-shadow-opacity)) !important;
+}
+
+/* Unified Obsidian Icon Badge system - Detached Layer */
+.obsidian-icon-badge {
+  display: flex;
+  height: 3rem; /* h-12 (48px) */
+  width: 3rem; /* w-12 (48px) */
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.875rem; /* Unified premium rounded corners */
+  background: var(--icon-bg) !important;
+  border: 1px solid var(--icon-border) !important;
+  color: var(--icon-color) !important;
+  flex-shrink: 0;
+  box-shadow: none !important;
+  transition: all 300ms cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* Ensure standardized icon sizing across all badges on the website */
+.obsidian-icon-badge svg {
+  width: 1.25rem !important;
+  height: 1.25rem !important;
+  flex-shrink: 0;
+}
+
+/* Hover effects or active states for icons with minimal, sophisticated micro-animations */
+.group:hover .obsidian-icon-badge, .obsidian-card:hover .obsidian-icon-badge, .active-playing .obsidian-icon-badge, .glass-card:hover .obsidian-icon-badge {
+  background: var(--icon-bg-hover) !important;
+  border-color: var(--icon-border-hover) !important;
+  color: var(--icon-color-hover) !important;
+  box-shadow: none !important;
+  transform: translateY(-0.5px) scale(1.02) !important;
+}
+
+/* Add subtle, high-end hover micro-animations to SVGs inside any group or interactive element */
+.group:hover svg, button:hover svg, a:hover svg, [role="button"]:hover svg, .obsidian-card:hover svg, .glass-card:hover svg {
+  transform: translateY(-0.5px) scale(1.02);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+svg {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* Alternating Section Background States with High-End Ambient Depth */
+section:nth-of-type(even), .section-alternate-bg {
+  background: var(--bg-gradient-even, var(--bg-alt)) !important;
+  background-color: var(--bg-alt) !important;
+  border-top: none !important;
+  border-bottom: none !important;
+}
+
+section:nth-of-type(odd), .section-primary-bg {
+  background: var(--bg-gradient-odd, var(--background)) !important;
+  background-color: var(--background) !important;
+}
+
+/* Beautiful custom section dividers with glowing gradient sweeps that fade out at margins */
+section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--divider-color) !important;
+  pointer-events: none;
+  z-index: 10;
+  opacity: var(--divider-opacity) !important;
+}
+
+/* Elegant soft ambient top spotlight transition inside the top edge of every section */
+section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1400px;
+  height: 250px;
+  background-image: radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.035) 0%, transparent 75%) !important;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Ambient backlight overlay for custom modules and containers */
+#phase-viewer-display::after, #about-founder-spotlight::after, #client-written-reviews-section::after, #faq-accordion-container::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 110%;
+  height: 110%;
+  background-image: radial-gradient(circle, rgba(37, 99, 235, 0.02) 0%, transparent 65%);
+  pointer-events: none;
+  z-index: -2;
+}
+
+/* Dedicated Premium Gradient Panel behind important content blocks to create high-end visual flow */
+.premium-gradient-panel {
+  position: relative;
+  border-radius: 1.5rem;
+  background: linear-gradient(180deg, rgba(37, 99, 235, 0.025) 0%, rgba(3, 3, 4, 0.8) 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  box-shadow: 
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.08),
+    0 4px 20px rgba(0, 0, 0, 0.35) !important;
+}
+
+/* Elegant Section Padding & Spacing system to achieve maximum content breathing room */
+section {
+  position: relative;
+  padding-top: 4rem !important;
+  padding-bottom: 4rem !important;
+}
+
+@media (min-width: 768px) {
+  section {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  section {
+    padding-top: 6rem !important;
+    padding-bottom: 6rem !important;
+  }
+}
+
+/* How We Work Page Spacing Optimization */
+#process-section {
+  padding-top: 3.5rem !important;
+  padding-bottom: 2rem !important;
+}
+
+@media (min-width: 1024px) {
+  #process-section {
+    padding-top: 4.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+}
+
+#how-we-work-cta-section {
+  padding-top: 1.5rem !important;
+  padding-bottom: 2rem !important;
+}
+
+@media (min-width: 1024px) {
+  #how-we-work-cta-section {
+    padding-top: 2rem !important;
+    padding-bottom: 2.75rem !important;
+  }
+}
+
+#faq-section-wrapper {
+  padding-top: 2.5rem !important;
+  padding-bottom: 4.5rem !important;
+}
+
+@media (min-width: 1024px) {
+  #faq-section-wrapper {
+    padding-top: 3.5rem !important;
+    padding-bottom: 6rem !important;
+  }
+}
+
+/* Layout spacing override for hero and trust-cards containers */
+#hero-section {
+  padding-top: 4.5rem !important;
+  padding-bottom: 2rem !important;
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  #hero-section {
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding-top: 6rem !important;
+    padding-bottom: 2.5rem !important;
+    overflow: visible !important;
+  }
+}
+
+/* Trust proof cards clean positioning below hero CTA buttons */
+#trust-cards-section {
+  padding-top: 1rem !important;
+  padding-bottom: 4rem !important;
+}
+
+@media (min-width: 1024px) {
+  #trust-cards-section {
+    padding-top: 1.5rem !important;
+    padding-bottom: 5rem !important;
+  }
+}
+
+/* Improved typography hierarchy & separation from content */
+h1, h2 {
+  color: var(--text-primary) !important;
+  text-shadow: none !important;
+  letter-spacing: -0.025em !important;
+}
+
+p {
+  color: var(--text-secondary) !important;
+}
+
+#trust-cards-section p {
+  color: var(--text-secondary) !important;
+}
+
+/* Simplified premium hover styles */
+.glow-border {
+  transition: all 0.2s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+/* Subtle pattern background helper - replaced with clean depth as requested */
+.bg-grid-pattern {
+  background-image: none !important;
+}
+
+/* Premium 3D Perspective Grid for Hero Section */
+.hero-perspective-grid-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  perspective: 1000px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-perspective-grid {
+  position: absolute;
+  top: -20%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background-image: 
+    linear-gradient(rgba(37, 99, 235, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37, 99, 235, 0.035) 1px, transparent 1px);
+  background-size: 50px 50px;
+  transform: rotateX(72deg) translateY(-25%);
+  transform-origin: center top;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.75) 0%, transparent 65%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.75) 0%, transparent 65%);
+  opacity: 0.95;
+}
+
+@keyframes grid-scroll {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 50px;
+  }
+}
+
+.animate-grid-scroll {
+  animation: grid-scroll 24s linear infinite;
+}
+
+/* Elegant Floating Glass Orb behind the Hero */
+.hero-floating-orb {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, rgba(255, 255, 255, 0.04) 0%, rgba(37, 99, 235, 0.02) 40%, rgba(0, 0, 0, 0) 80%);
+  box-shadow: 
+    inset 0 0 30px rgba(255, 255, 255, 0.04),
+    0 15px 60px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(40px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Soft blue ambient glow behind headline */
+.headline-ambient-glow {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 550px;
+  height: 320px;
+  background-image: radial-gradient(circle, rgba(37, 99, 235, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Animated mesh glow layers for premium layered background depth */
+.hero-mesh-glow-1 {
+  position: absolute;
+  top: -10%;
+  left: -5%;
+  width: 65%;
+  height: 65%;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.08) 0%, transparent 70%);
+  filter: blur(90px);
+  pointer-events: none;
+  z-index: 0;
+  animation: hero-mesh-float-1 25s infinite alternate ease-in-out;
+}
+
+.hero-mesh-glow-2 {
+  position: absolute;
+  bottom: -5%;
+  right: -5%;
+  width: 60%;
+  height: 60%;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.05) 0%, transparent 70%);
+  filter: blur(100px);
+  pointer-events: none;
+  z-index: 0;
+  animation: hero-mesh-float-2 28s infinite alternate ease-in-out;
+}
+
+.hero-mesh-glow-3 {
+  position: absolute;
+  top: 25%;
+  left: 20%;
+  width: 55%;
+  height: 55%;
+  background: radial-gradient(circle, rgba(96, 165, 250, 0.04) 0%, transparent 65%);
+  filter: blur(110px);
+  pointer-events: none;
+  z-index: 0;
+  animation: hero-mesh-float-3 32s infinite alternate ease-in-out;
+}
+
+@keyframes hero-mesh-float-1 {
+  0% { transform: translate(0px, 0px) rotate(0deg) scale(1); }
+  50% { transform: translate(40px, 20px) rotate(90deg) scale(1.1); }
+  100% { transform: translate(0px, 0px) rotate(180deg) scale(1); }
+}
+
+@keyframes hero-mesh-float-2 {
+  0% { transform: translate(0px, 0px) rotate(0deg) scale(1.05); }
+  50% { transform: translate(-30px, -30px) rotate(-90deg) scale(0.95); }
+  100% { transform: translate(0px, 0px) rotate(-180deg) scale(1.05); }
+}
+
+@keyframes hero-mesh-float-3 {
+  0% { transform: translate(0px, 0px) scale(0.98); }
+  50% { transform: translate(20px, -15px) scale(1.05); }
+  100% { transform: translate(0px, 0px) scale(0.98); }
+}
+
+/* Shiny button sweep keyframes */
+@keyframes sheen-sweep {
+  0% { transform: translateX(-100%) skewX(-15deg); }
+  100% { transform: translateX(100%) skewX(-15deg); }
+}
+
+.animate-sheen-sweep {
+  animation: sheen-sweep 2s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+/* Premium mouse-follow ambient lighting */
+.mouse-follow-light {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.12) 0%, rgba(37, 99, 235, 0.02) 40%, transparent 70%);
+  pointer-events: none;
+  z-index: 12; /* Float above card background layers but behind header z-40 and modal overlays */
+  mix-blend-mode: screen;
+  will-change: transform;
+}
+
+/* Premium Video Demo Container (Apple-like Showcase Pages) */
+.video-demo-container {
+  border-radius: 20px !important;
+  background-color: var(--bg-alt) !important;
+  border: 1px solid var(--card-border) !important;
+  box-shadow: var(--card-shadow) !important;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
+              background-color 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover elevation and soft shadow enhancement */
+.video-demo-container:hover {
+  transform: translateY(-2.5px) !important; /* Lifts slightly on hover for premium SaaS feel */
+  border-color: var(--card-border-hover) !important; /* Brighten borders slightly */
+  background-color: var(--bg-alt) !important;
+  box-shadow: var(--card-shadow-hover) !important;
+}
+
+/* Active/playing state subtle glow */
+.video-demo-container.active-playing {
+  border-color: rgba(37, 99, 235, 0.35) !important;
+  background-color: var(--bg-alt) !important;
+  box-shadow: var(--card-shadow-hover) !important;
+}
+
+/* Soft reflection overlay inside the card */
+.video-demo-reflection-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 30%, transparent 60%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Elegant glass sheen that sweeps on hover */
+.video-demo-container .gloss-sheen {
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.03) 50%, transparent 100%);
+  transform: skewX(-25deg);
+  transition: left 0.75s ease-in-out;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.video-demo-container:hover .gloss-sheen {
+  left: 150%;
+}
+
+/* Premium global keyboard focus ring accessibility states - Dual border style like Vercel/Linear */
+*:focus-visible {
+  outline: 2px solid rgba(96, 165, 250, 0.6) !important; /* Elegant brighter blue outer focus ring */
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15), 0 0 0 1px var(--background) !important;
+}
+
+/* Ensure nice focus outline inside custom form fields */
+input:focus, textarea:focus, select:focus {
+  outline: none !important;
+  border-color: rgba(37, 99, 235, 0.35) !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12) !important;
+}
+
+/* Standardized responsive transition behaviors across the entire interface for consistent SaaS feeling */
+a, button, .cursor-pointer, .obsidian-card, .glass-card, [role="button"] {
+  transition-property: color, background-color, border-color, opacity, box-shadow, transform;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  transition-duration: 180ms;
+}
+
+input, textarea, select {
+  transition-property: border-color, box-shadow, background-color;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  transition-duration: 150ms;
+}
+
+/* Custom premium text selection colors */
+::selection {
+  background-color: rgba(37, 99, 235, 0.35) !important;
+  color: #ffffff !important;
+}
+
+/* Trust card icon styling */
+.trust-card-icon {
+  background: var(--icon-bg) !important;
+  border: 1px solid var(--icon-border) !important;
+  color: var(--icon-color) !important;
+  transition: all 250ms cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.trust-card:hover .trust-card-icon {
+  background: var(--icon-bg-hover) !important;
+  border-color: var(--icon-border-hover) !important;
+  color: var(--icon-color-hover) !important;
+}
+
+/* Premium FAQ Accordion cards */
+.premium-faq-card {
+  border-radius: 1.25rem !important; /* Unified 20px premium border radius */
+  background: var(--faq-card-bg) !important;
+  border: 1px solid var(--faq-border) !important;
+  box-shadow: var(--card-shadow) !important;
+  transition: all 250ms cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.premium-faq-card:hover {
+  transform: translateY(-2px) !important;
+  border-color: var(--faq-border-active) !important;
+  background: var(--faq-card-hover) !important;
+  box-shadow: var(--card-shadow-hover) !important;
+}
+
+.premium-faq-card.active {
+  background: var(--faq-card-active) !important;
+  border-color: var(--faq-border-active) !important;
+  box-shadow: var(--card-shadow-hover) !important;
+}
+
+/* Custom theme navbar scrolled classes for header */
+.theme-navbar-scrolled {
+  background-color: var(--navbar-bg) !important;
+  border-bottom: 1px solid var(--navbar-border) !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, var(--navbar-shadow-opacity)) !important;
+}
+
+.theme-mobile-dropdown {
+  background-color: var(--navbar-dropdown-bg) !important;
+  border-bottom: 1px solid var(--navbar-border) !important;
+}
+
+.border-theme {
+  border-color: var(--border-color) !important;
+}
+
+/* Primary and Secondary button global overrides */
+.btn-enterprise-primary,
+#hero-cta-primary,
+#btn-book-consultation,
+#btn-mobile-menu-consultation,
+#btn-about-cta,
+#testimonials-cta-btn,
+#btn-submit-consultation,
+#footer-book-btn,
+#how-we-work-cta-section button,
+[id^="system-core-block-"] button,
+button.btn-primary {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  vertical-align: middle !important;
+  gap: 0.5rem !important; /* Spacing between text and icon */
+  background-color: #2563EB !important;
+  color: #FFFFFF !important;
+  font-family: var(--font-sans, ui-sans-serif, system-ui, sans-serif) !important;
+  font-size: 0.875rem !important; /* Comfortable 14px size */
+  font-weight: 600 !important;
+  letter-spacing: 0.015em !important;
+  padding: 0.75rem 1.5rem !important; /* Comfortable padding */
+  border-radius: 14px !important; /* Rounded corners (14–16px) */
+  border: 1px solid #2563EB !important;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.12), 0 1px 2px rgba(0, 0, 0, 0.05) !important;
+  transition: transform 240ms cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 240ms cubic-bezier(0.16, 1, 0.3, 1), 
+              background-color 240ms cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 240ms cubic-bezier(0.16, 1, 0.3, 1) !important;
+  cursor: pointer !important;
+  outline: none !important;
+  user-select: none !important;
+}
+
+.btn-enterprise-primary:hover,
+#hero-cta-primary:hover,
+#btn-book-consultation:hover,
+#btn-mobile-menu-consultation:hover,
+#btn-about-cta:hover,
+#testimonials-cta-btn:hover,
+#btn-submit-consultation:hover,
+#footer-book-btn:hover,
+#how-we-work-cta-section button:hover,
+[id^="system-core-block-"] button:hover,
+button.btn-primary:hover {
+  transform: translateY(-2px) !important; /* Small premium lift */
+  background-color: #1D4ED8 !important; /* Slightly darker accent color */
+  border-color: #1D4ED8 !important;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05) !important; /* Slightly stronger shadow */
+}
+
+/* Primary Button Icon alignment and spacing */
+.btn-enterprise-primary svg,
+#hero-cta-primary svg,
+#btn-book-consultation svg,
+#btn-mobile-menu-consultation svg,
+#btn-about-cta svg,
+#testimonials-cta-btn svg,
+#btn-submit-consultation svg,
+#footer-book-btn svg,
+#how-we-work-cta-section button svg,
+[id^="system-core-block-"] button svg,
+button.btn-primary svg {
+  width: 1rem !important;
+  height: 1rem !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  flex-shrink: 0 !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+  transition: transform 240ms cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* Arrow right & send icon micro-animation on hover: animate only a few pixels */
+.btn-enterprise-primary:hover svg.lucide-arrow-right,
+.btn-enterprise-primary:hover svg.lucide-arrow-up-right,
+.btn-enterprise-primary:hover svg.lucide-send,
+#hero-cta-primary:hover svg.lucide-arrow-right,
+#btn-book-consultation:hover svg.lucide-arrow-up-right,
+#btn-mobile-menu-consultation:hover svg.lucide-arrow-up-right,
+#btn-about-cta:hover svg.lucide-arrow-right,
+#testimonials-cta-btn:hover svg.lucide-arrow-right,
+#btn-submit-consultation:hover svg.lucide-send,
+#footer-book-btn:hover svg.lucide-arrow-right,
+#how-we-work-cta-section button:hover svg.lucide-arrow-right,
+[id^="system-core-block-"] button:hover svg.lucide-arrow-right,
+button.btn-primary:hover svg.lucide-arrow-right {
+  transform: translate(3px, -1px) !important;
+}
+
+/* Secondary Button style */
+.btn-enterprise-secondary,
+#hero-cta-secondary,
+#btn-return-landing,
+button.btn-secondary {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  vertical-align: middle !important;
+  gap: 0.5rem !important; /* Spacing between text and icon */
+  background-color: #FFFFFF !important;
+  color: #0F172A !important;
+  font-family: var(--font-sans, ui-sans-serif, system-ui, sans-serif) !important;
+  font-size: 0.875rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.015em !important;
+  padding: 0.75rem 1.5rem !important; /* Comfortable padding */
+  border-radius: 14px !important; /* Rounded corners (14–16px) */
+  border: 1px solid #E2E8F0 !important; /* Thin border */
+  box-shadow: 0 2px 4px rgba(15, 23, 42, 0.02), 0 1px 2px rgba(0, 0, 0, 0.02) !important; /* Subtle shadow */
+  transition: transform 240ms cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 240ms cubic-bezier(0.16, 1, 0.3, 1), 
+              background-color 240ms cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 240ms cubic-bezier(0.16, 1, 0.3, 1) !important;
+  cursor: pointer !important;
+  outline: none !important;
+  user-select: none !important;
+}
+
+.btn-enterprise-secondary:hover,
+#hero-cta-secondary:hover,
+#btn-return-landing:hover,
+button.btn-secondary:hover {
+  transform: translateY(-2px) !important; /* Small premium lift */
+  background-color: #F8FAFC !important; /* Hover changes to a very light gray */
+  border-color: #CBD5E1 !important;
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(0, 0, 0, 0.02) !important; /* Slightly stronger shadow */
+}
+
+.btn-enterprise-secondary svg,
+#hero-cta-secondary svg,
+#btn-return-landing svg,
+button.btn-secondary svg {
+  width: 1rem !important;
+  height: 1rem !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  flex-shrink: 0 !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+  transition: transform 240ms cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.btn-enterprise-secondary:hover svg.lucide-arrow-right,
+.btn-enterprise-secondary:hover svg.lucide-arrow-up-right,
+#hero-cta-secondary:hover svg.lucide-arrow-right,
+#btn-return-landing:hover svg.lucide-arrow-right,
+button.btn-secondary:hover svg.lucide-arrow-right {
+  transform: translate(3px, -1px) !important;
+}
+
+/* Consultation Modal Stacking and Single-Click Interaction Integrity */
+#modal-container {
+  pointer-events: auto;
+  touch-action: pan-y;
+}
+
+#modal-card {
+  pointer-events: auto !important;
+  isolation: isolate;
+  -webkit-overflow-scrolling: touch;
+}
+
+#modal-card input,
+#modal-card select,
+#modal-card textarea,
+#modal-card button {
+  pointer-events: auto !important;
+  touch-action: manipulation;
+}
+
+

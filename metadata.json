@@ -1,0 +1,8 @@
+{
+  "name": "Bilvo Ai | Enterprise AI Automations & Workflows",
+  "description": "Bilvo Ai builds premium custom enterprise AI systems and seamless automations that eliminate operational bottlenecks, saving thousands of manual work hours.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

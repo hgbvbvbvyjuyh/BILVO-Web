@@ -1,0 +1,20 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /strategy_session_requests/{requestId} {
+      // Submissions are strictly write-only to prevent unauthorized reading or exposing leads
+      allow read: if false;
+      allow create: if request.resource.data.firstName is string
+                    && request.resource.data.lastName is string
+                    && request.resource.data.email is string
+                    && request.resource.data.companyName is string
+                    && request.resource.data.role is string
+                    && request.resource.data.companySize is string
+                    && request.resource.data.annualRevenue is string
+                    && request.resource.data.projectBudget is string
+                    && request.resource.data.howCanWeHelp is string
+                    && request.resource.data.status == 'new';
+      allow update, delete: if false;
+    }
+  }
+}

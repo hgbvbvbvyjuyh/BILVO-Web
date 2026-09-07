@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function() {
+        if (typeof window !== 'undefined') {
+          try {
+            var rawFetch = window.fetch;
+            var currentFetch = typeof rawFetch === 'function' ? rawFetch.bind(window) : rawFetch;
+            var fetchDesc = {
+              get: function() {
+                return currentFetch;
+              },
+              set: function(val) {
+                currentFetch = val;
+              },
+              configurable: true,
+              enumerable: true
+            };
+            try {
+              Object.defineProperty(window, 'fetch', fetchDesc);
+            } catch (e1) {}
+            if (typeof Window !== 'undefined' && Window.prototype) {
+              try {
+                Object.defineProperty(Window.prototype, 'fetch', fetchDesc);
+              } catch (e2) {}
+            }
+          } catch (err) {}
+        }
+      })();
+    </script>
+    <title>Bilvo Ai | Enterprise AI Automations & Workflows</title>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/logo.png" />
+    
+    <!-- Primary SEO Metadata -->
+    <meta name="description" content="Bilvo Ai builds premium custom enterprise AI systems and seamless automations that eliminate operational bottlenecks, saving thousands of manual work hours." />
+    <meta name="keywords" content="AI automation, enterprise AI, custom workflow automation, operations strategist, AI systems, lead intake, automated customer care" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://bilvo.ai/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bilvo.ai/" />
+    <meta property="og:title" content="Bilvo Ai | Enterprise AI Automations & Workflows" />
+    <meta property="og:description" content="Bilvo Ai builds premium custom enterprise AI systems and seamless automations that eliminate operational bottlenecks, saving thousands of manual work hours." />
+    <meta property="og:image" content="/logo.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://bilvo.ai/" />
+    <meta property="twitter:title" content="Bilvo Ai | Enterprise AI Automations & Workflows" />
+    <meta property="twitter:description" content="Bilvo Ai builds premium custom enterprise AI systems and seamless automations that eliminate operational bottlenecks, saving thousands of manual work hours." />
+    <meta property="twitter:image" content="/logo.png" />
+
+    <!-- Preconnect to font domains for faster lookup and establishment -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- High-priority preload for fonts stylesheet -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" as="style" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" />
+
+    <!-- Structured Schema.org Markup (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://bilvo.ai/#organization",
+          "name": "Bilvo Ai",
+          "url": "https://bilvo.ai/",
+          "logo": "https://bilvo.ai/logo.png",
+          "sameAs": []
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://bilvo.ai/#service",
+          "name": "Bilvo Ai Enterprise AI Automations",
+          "image": "https://bilvo.ai/logo.png",
+          "url": "https://bilvo.ai/",
+          "telephone": "",
+          "priceRange": "$$$$",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Austin",
+            "addressRegion": "TX",
+            "postalCode": "78701",
+            "addressCountry": "US"
+          },
+          "founder": {
+            "@type": "Person",
+            "name": "Rofiqul Islam"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://bilvo.ai/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What kind of work can you automate?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We can automate many repetitive business processes, including lead follow-up, appointment booking, customer inquiries, data entry, reporting, internal workflows, and other administrative tasks."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Will automation replace my employees?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. The goal is to remove repetitive work so your team can spend more time on work that actually requires people, judgment, and customer relationships."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How can automation save my business money?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "By reducing the amount of manual work your team has to perform, automation can reduce wasted employee hours, administrative overhead, and the need to hire additional staff for repetitive tasks."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can automation actually help me make more money?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Automation can help businesses respond to leads faster, follow up consistently, reduce missed opportunities, improve customer experiences, and handle more business without adding the same amount of overhead."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do I need to change the software my business already uses?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Not necessarily. We aim to work with your existing tools wherever practical rather than forcing you to replace systems that already work for your business."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How long does it take to implement?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "It depends on the complexity of the process and the systems involved. After understanding your requirements, we can give you a clearer implementation timeline."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What happens after the system is built?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We monitor the system, make improvements where needed, and help ensure it continues to support your business as your processes and needs change."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How much does automation cost?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The cost depends on what needs to be automated, the complexity of the workflow, and the systems involved. We recommend starting with a strategy session so we can understand the opportunity before recommending a solution."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
