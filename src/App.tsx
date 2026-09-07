@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback, Suspense, lazy } from 'react';
 import { AnimatePresence, motion, useMotionValue, useSpring } from 'motion/react';
 import { Cpu, Mail, Star, Users, ArrowRight } from 'lucide-react';
+import { Analytics } from '@vercel/analytics/react';
 import { TabType } from './types';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -457,6 +458,9 @@ export default function App() {
           )}
         </AnimatePresence>
       </Suspense>
+
+      {/* Vercel Web Analytics */}
+      <Analytics />
     </div>
   );
 }
